@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAP Verification</title>
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <!-- Bootstrap-5 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}}" />
+
+    <!-- custom-styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/responsive.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animation.css')}}" />
+  </head>
+  <body>
+    <main class="overflow-hidden show-section">
+      <div class="row steps fadedown">
+        <div class="col-md-5 sideImg">
+          <!-- logo -->
+          <div class="logo">
+            <img src="{{ url_for('static', filename='assets/images/logo.png')}}" alt="Logo" />HexaLabs<span>.</span>
+          </div>
+
+          <!-- side img -->
+          <div class="imgInner tab-none">
+            <img src="{{ url_for('static', filename='assets/images/avatar.png')}}" alt="Avatar" />
+          </div>
+        </div>
+        <div class="col-md-7 formBG">
+          <!-- wrapper -->
+          <div class="wrapper">
+           <!--  <form class="step show-section"> -->
+              <!-- step 1 -->
+              <fieldset id="step1">
+                <div class="row align-items-center">
+                  <div class="col-md-2 tab-none">
+                    <img class="w-100" src="{{ url_for('static', filename='assets/images/heading.png')}}" alt="" />
+                  </div>
+                  <div class="col-md-10">
+                    <!-- Heading -->
+                    <article class="formHeading">
+                      <p>Lets see if this CAP customer quilifies!</p>
+                      <h1>Does the CAP customer have gas? </h1>
+                    </article>
+                  </div>
+                </div>
+                <form action="#" method="post">
+                <div class="row mt-md-5 mt-4">
+                  <div class="col-md-6 tab-100">
+                    <div class="revealfield radio-field">
+                      <input type="radio" name="opp1" value="cap with gas" />
+                      <i class="fa-solid fa-share-nodes"></i>
+                      <label>CAP with gas</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 tab-100">
+                    <div class="revealfield delay-100ms radio-field">
+                      <input
+                        type="radio"
+                        name="opp1"
+                        value="cap no gas"
+                      />
+                      <i class="fa-solid fa-shapes"></i>
+                      <label>CAP without gas</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="next-prev">
+                  <button
+                    type="button"
+                    id="step1btn"
+                    class="w-100 mt-md-4 next"
+                  >
+                    <i class="fa-solid fa-angles-right"></i>Next
+                  </button>
+                </div>
+              </fieldset>
+              <!-- step 2 -->
+              <fieldset id="step2">
+                <div class="row align-items-center">
+                  <div class="col-md-2 tab-none">
+                    <img class="w-100" src="{{ url_for('static', filename='assets/images/heading.png')}}" alt="" />
+                  </div>
+                  <div class="col-md-10">
+                    <!-- Heading -->
+                    <article class="formHeading">
+                      <p>Almost there!</p>
+                      <h1>Please enter the city</h1>
+                    </article>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 tab-100">
+                    <input type="text" name="city" class="form-control" placeholder="Enter city" aria-label="city" aria-describedby="basic-addon1">
+                   </div>
+                 </div>
+                <div class="next-prev">
+                  <button type="submit" value="submit" class="w-100" id="sub">
+                    <i class="fa-solid fa-angles-right"></i>Submit
+                  </button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="error"></div>
+
+    <!-- Bootstrap-5 -->
+    <script src="{{url_for('static', filename='assets/js/bootstrap.min.js')}}"></script>
+
+    <!-- Jquery -->
+    <script src="{{url_for('static', filename='assets/js/jquery-3.6.1.min.js')}}"></script>
+
+    <!-- My js -->
+    <script src="{{url_for('static', filename='assets/js/custom.js')}}"></script>
+  </body>
+</html>

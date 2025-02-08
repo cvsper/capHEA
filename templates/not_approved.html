@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorry</title>
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <!-- Bootstrap-5 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}}" />
+
+    <!-- custom-styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style3.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/responsive.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animation2.css')}}" />
+  </head>
+  <body>
+    <main class="overflow-hidden thankyou">
+      <div class="container my-5 position-relative" style="z-index: 1">
+        <!-- avatar -->
+        <div class="avatar">
+          <img src="{{ url_for('static', filename='assets/images/doctor.png')}}" alt="Doctor" />
+        </div>
+
+        <!-- Heading -->
+        <h1 class="thankyouHeading">Unqulified</h1>
+
+        <!-- Description -->
+        <p class="thankyouP">
+          Sorry this CAP customer does not qualify please click the link below to reffer customer to their local CAP agency.
+        </p>
+
+        <!-- Button -->
+        <a href="{{ url }}">
+        <button class="add">
+          Local CAP
+        </button>
+        </a>
+        <a href="">
+        <p class="socialHeading mt-5 pt-md-5">New Search</p>
+        </a>
+        <!-- Social MEdia -->
+      </div>
+    </main>
+
+    <!-- Bootstrap-5 -->
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js')}}"></script>
+
+    <!-- Jquery -->
+    <script src="{{ url_for('static', filename='assets/js/jquery-3.6.1.min.js')}}"></script>
+
+    <!-- My js -->
+    <script src="{{ url_for('static', filename='assets/js/custom3.js')}}"></script>
+  </body>
+</html>
